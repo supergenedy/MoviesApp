@@ -12,6 +12,8 @@ struct URLS {
     
     static let API_KEY = "e2ec881f72fb401340118b2f6d2c716d"
     
+    static let signupURL = "https://www.themoviedb.org/account/signup"
+    
     static let baseURL = "https://api.themoviedb.org/3/"
     
     static let generate_Token = URLS.baseURL + "authentication/token/new?api_key=" + URLS.API_KEY

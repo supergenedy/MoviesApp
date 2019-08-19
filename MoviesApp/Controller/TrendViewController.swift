@@ -20,8 +20,15 @@ class TrendViewController: UIViewController,UICollectionViewDelegate,UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchForMovieResults(name: "day")
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if NetworkHelper.isConnectedToInternet {
+            self.searchForMovieResults(name: "day")
+        }
+        
     }
 
     @IBAction func indexChanged(_ sender: Any) {

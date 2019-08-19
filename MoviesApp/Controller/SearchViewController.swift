@@ -19,6 +19,16 @@ class SearchViewController: UIViewController,UISearchBarDelegate ,UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if NetworkHelper.isConnectedToInternet{
+            searchBar.isUserInteractionEnabled = true
+        } else {
+            searchBar.isUserInteractionEnabled = false
+        }
         
     }
 

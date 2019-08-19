@@ -44,7 +44,9 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func favourites(_ sender: Any) {
-        AlertHelper().showMessage(controller: self, title: "Sorry", msg: "This will be available soon")
+        let nextVc = self.storyboard!.instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+        
+        self.present(UINavigationController(rootViewController: nextVc), animated: true, completion: nil)
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -53,7 +55,6 @@ class ProfileViewController: UIViewController {
     
     func getUserProfile(){
         if !session.isEmpty {
-            print(session)
             if NetworkHelper.isConnectedToInternet {
                 APIClient().getProfileDetails(sessionID: session , Success: {
                     success in
@@ -68,7 +69,7 @@ class ProfileViewController: UIViewController {
                 }){ error in
                     self.showLogoutAlert(title: "Session Expired", msg: "Sorry the session has been expired, you have to login again")
                 }
-            }else {
+            } else {
                 AlertHelper().showMessage(controller: self, title: "Oops!", msg: "Check you internet connection")
             }
         } else {

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: CustomButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     var token = ""
     
@@ -39,6 +40,11 @@ class LoginViewController: UIViewController {
             self.refreshToken()
             AlertHelper().showMessage(controller: self, title: "Oops!", msg: "Please try again")
         }
+    }
+    
+    @IBAction func signupClicked(_ sender: Any) {
+        guard let url = URL(string: URLS.signupURL) else { return }
+        UIApplication.shared.open(url)
     }
     
     func refreshToken(){

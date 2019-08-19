@@ -21,10 +21,20 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.getMoviesData()
+        if !NetworkHelper.isConnectedToInternet {
+            AlertHelper().showMessage(controller: self, title: "Oops!", msg: "No Internet connection")
+        }
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if NetworkHelper.isConnectedToInternet {
+            self.getMoviesData()
+        }
+        
+    }
     
     func getMoviesData(){
         APIClient().moviesList(url: URLS.topRated, 1, Success: {
