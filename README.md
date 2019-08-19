@@ -4,10 +4,10 @@ Fetching Movies Using TMDb themovieDB API
 Using [TMDb API](https://www.themoviedb.org/) to make a user login and fetch popular, top rated, now playing, upcoming and trending movies by day and week, it also allows the user to search for a movie and view the movie details, The user can mark a movie as favourite and the app save the data with CoreData
 
 ### Screenshots:
-<img src="./images/s1.png" width="200" height="356">&nbsp;
-<img src="./images/s2.png" width="200" height="356">&nbsp;
-<img src="./images/s3.png" width="200" height="356">&nbsp;
-<img src="./images/s4.png" width="200" height="356"><br>
+<img src="./images/1.png" width="200" height="356">&nbsp;
+<img src="./images/2.png" width="200" height="356">&nbsp;
+<img src="./images/3.png" width="200" height="356">&nbsp;
+<img src="./images/4.png" width="200" height="356"><br>
 
 
 ### Features:
