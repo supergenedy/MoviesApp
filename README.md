@@ -24,3 +24,8 @@ Using [TMDb API](https://www.themoviedb.org/) to make a user login and fetch pop
 
 - [Kingfisher](https://github.com/onevcat/Kingfisher): for loading and caching images
 
+
+### Requirements:
+- Xcode 10.2.1+
+- Swift 5.0+
+- iOS 9.0+
